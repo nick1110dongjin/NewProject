@@ -1,0 +1,20 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.BoardMapper">
+
+    <insert id="insertUser" parameterType="com.example.demo.dto.BoardDTO">
+        INSERT INTO user
+        (user_id,
+         password,
+         phone_number,
+         address,
+         email
+        )
+        VALUE
+        (#{userId},
+         #{password},
+         #{phoneNumber},
+         #{address},
+         #{email}
+        )
+    </insert>
+</mapper>
